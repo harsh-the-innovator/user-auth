@@ -1,0 +1,26 @@
+.form-style{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.form-style .card{
+    box-shadow:  1px 1px 20px 0px #000000;
+}
+
+.form-style .btn-primary{
+    background-color: #7B1FA2;
+    border: none;
+}
+.form-style .btn-primary:hover{
+    background-color: #9C27B0;
+}
+.form-style .btn-primary:focus,.form-style .btn-primary:active{
+    background-color: #7B1FA2;
+}
+
+.form-style .btn-primary:not(:disabled):not(.disabled).active,.form-style .btn-primary:not(:disabled):not(.disabled):active {
+    background-color: #9C27B0;
+}

@@ -33,18 +33,17 @@ function App() {
             newestOnTop
             closeOnClick={false}
             rtl={false}
-            pauseOnFocusLoss
             draggable
             pauseOnHover
           />
           <MainNavigation />
           <main className="main-content">
             <Switch>
-              {token && <Redirect from="/" to="/profile" />}
               {!token && <Route path="/login" component={LoginPage} exact />}
               {!token && <Route path="/signup" component={SignUpPage} exact />}
-              {token && <Route path="/profile" component={ProfilePage} exact />}
               {!token && <Redirect from="/" to="/login" />}
+              {token && <Route path="/profile" component={ProfilePage} exact />}
+              {token && <Redirect from="/" to="/profile" />}
             </Switch>
           </main>
         </AuthContext.Provider>

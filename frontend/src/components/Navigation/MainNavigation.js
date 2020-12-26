@@ -3,6 +3,7 @@ import { Navbar, Nav, Button } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
 import AuthContext from "../../context/authContext";
 import "./mainnavigation.css";
+import logoutIcon from "../../assets/logout.png";
 
 const MainNavigation = () => {
   const context = useContext(AuthContext);
@@ -24,10 +25,19 @@ const MainNavigation = () => {
         )}
         {context.token && (
           <Button
-            style={{ background: "#FF5722", border: "none" }}
+            style={{
+              background: "#FF5722",
+              border: "none",
+              display: "inline-block",
+            }}
             onClick={context.logout}
           >
             Logout
+            <img
+              src={logoutIcon}
+              alt="logout"
+              style={{ width: "1rem", marginLeft: "0.5rem" }}
+            ></img>
           </Button>
         )}
       </Nav>

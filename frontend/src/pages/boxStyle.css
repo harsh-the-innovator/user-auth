@@ -6,8 +6,22 @@
     padding: 1rem;
 }
 
+@keyframes drop{
+    from{
+        opacity: 0;
+        /* transform: translateY(-400px); */
+    }
+    to{
+        /* transform: translateY(0); */
+    }
+}
+
 .form-style .card{
     box-shadow:  1px 1px 20px 0px #000000;
+    animation-name: drop;
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in;
 }
 
 .form-style .btn-primary{

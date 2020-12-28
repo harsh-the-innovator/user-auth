@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { Form, Button, Card } from "react-bootstrap";
 import AuthContext from "../context/authContext";
 import "./boxStyle.css";
@@ -7,6 +7,10 @@ import { toast } from "react-toastify";
 const LoginPage = () => {
   const [validated, setValidated] = useState(false);
   const context = useContext(AuthContext);
+
+  useEffect(() => {
+    console.log("hello");
+  });
 
   const handleSubmit = (event) => {
     event.preventDefault();

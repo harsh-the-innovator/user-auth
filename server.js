@@ -5,6 +5,8 @@ const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const morgan = require("morgan");
 const cors = require("cors");
+const passport = require("passport");
+require("./config/passport");
 
 // IMPORT ROUTES
 const authRoutes = require("./routes/auth");
@@ -31,6 +33,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(morgan("dev"));
 app.use(cors());
+app.use(passport.initialize());
 
 // ROUTES
 app.use("/api/myapp", authRoutes);

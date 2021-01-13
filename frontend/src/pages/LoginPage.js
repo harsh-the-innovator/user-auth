@@ -79,7 +79,7 @@ const LoginPage = (props) => {
 
     setValidated(true);
   };
-  console.log(props);
+
   return (
     <div className="form-style">
       <Card>
@@ -109,10 +109,23 @@ const LoginPage = (props) => {
                 Please provide a valid passsword
               </Form.Control.Feedback>
             </Form.Group>
-            <Button type="submit">Submit</Button>
+            <Button className="login-btn" type="submit">
+              Submit
+            </Button>
           </Form>
-          <br />
-          <Button onClick={handleGoogleLogin}>Login with Google</Button>
+          <div className="separator">OR</div>
+          <Button className="auth-google-btn" onClick={handleGoogleLogin}>
+            <img
+              style={{
+                width: "20px",
+                marginRight: "0.5rem",
+                marginBottom: "3px",
+              }}
+              alt="Google sign-in"
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png"
+            />
+            Sign in with Google
+          </Button>
         </Card.Body>
       </Card>
     </div>
